@@ -1,7 +1,7 @@
 // Notificação por e-mail (opcional): coloque seu e-mail na constante abaixo.
 // Para funcionar remotamente no GitHub Pages, usamos FormSubmit (sem servidor próprio).
 // Depois do primeiro envio, o FormSubmit pode pedir confirmação do endereço.
-const NOTIFY_EMAIL = 'SEU_EMAIL_AQUI';
+const NOTIFY_EMAIL = 'kakagomes620@gmail.com';
 
 async function notifyOwner(payload) {
   if (!NOTIFY_EMAIL || NOTIFY_EMAIL === 'SEU_EMAIL_AQUI') return {ok:false, reason:'email_nao_configurado'};
