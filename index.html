@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Meu Convite ❤️</title><link rel="stylesheet" href="style.css">
-</head>
-<body><div id="hearts"></div>
-<main>
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Meu Convite ❤️</title><link rel="stylesheet" href="style.css"></head><body><div id="hearts"></div><main>
 <section class="screen active" id="landing"><div class="card"><div class="emoji">❤️</div><small>TENHO UMA PERGUNTA...</small><h1>Você recebeu um convite especial.</h1><p>Abra para descobrir o que preparei para você.</p><button id="open">ABRIR MEU CONVITE ❤️</button></div></section>
-<section class="screen" id="invite"><div class="card"><div class="emoji">💌</div><small>CONVITE ESPECIAL</small><h1>Você aceitaria ir a um date comigo?</h1><p id="msg">Escolha com carinho... 👀</p><div class="buttons"><button id="yes">SIM ❤️</button><button class="secondary" id="no">NÃO 😭</button></div></div></section>
+<section class="screen" id="invite"><div class="card"><div class="chat-head"><span>💬</span><div><strong>Conversa</strong><small>convite especial</small></div></div><div id="chat" class="chat"></div><div class="emoji">💌</div><small>CONVITE ESPECIAL</small><h1>Você aceitaria ir a um date comigo?</h1><p id="msg">Escolha com carinho... 👀</p><div class="buttons"><button id="yes">SIM ❤️</button><button class="secondary" id="no">NÃO 😭</button></div></div></section>
 <section class="screen" id="date"><div class="card"><div class="emoji">📅</div><small>PARTE 2</small><h1>Quando vamos sair?</h1><label>Data</label><input id="dateInput" type="date"><label>Horário</label><input id="timeInput" type="time"><button id="continue">CONTINUAR ❤️</button></div></section>
 <section class="screen" id="food"><div class="card"><div class="emoji">🍕</div><small>PARTE 3</small><h1>O que vamos fazer?</h1><div class="choices"><button class="choice" data-x="🍕 Pizza + conversa">🍕 Pizza + conversa</button><button class="choice" data-x="🍿 Cinema">🍿 Cinema</button><button class="choice" data-x="🍔 Hambúrguer">🍔 Hambúrguer</button><button class="choice" data-x="☕ Café + passeio">☕ Café + passeio</button></div></div></section>
-<section class="screen" id="final"><div class="card"><div class="emoji big">💖</div><small>DEU CERTO!</small><h1>Então está combinado! 🥰</h1><p id="summary"></p><button id="again">FAZER DE NOVO</button></div></section>
-</main><script src="script.js"></script></body></html>
+<section class="screen" id="final"><div class="card"><div class="emoji big">💖</div><small>CONVITE ENVIADO</small><h1>Então está combinado! 🥰</h1><div class="sent-card"><img src="convite.svg" alt="Convite romântico"><div class="sent-badge">✓ Enviado</div></div><p id="summary"></p><div id="notifyStatus" class="notify">Seu convite foi registrado. ❤️</div><button id="again">FAZER DE NOVO</button></div></section>
+</main><script src="notification.js"></script><script src="script.js"></script></body></html>
