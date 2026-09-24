@@ -11,7 +11,10 @@ function escapeNo(e){if(e)e.preventDefault();attempts++;$('msg').textContent=msg
 ['pointerenter','pointerdown','touchstart'].forEach(e=>$('no').addEventListener(e,escapeNo));
 $('continue').onclick=()=>{if(!$('dateInput').value||!$('timeInput').value)return alert('Escolha a data e o horário ❤️');addBubble(`Quero te ver em <strong>${new Date($('dateInput').value+'T00:00:00').toLocaleDateString('pt-BR')}</strong>, às <strong>${$('timeInput').value}</strong>.`,'them');show('food')};
 let finalPayload=null;
+$('restaurantBtn').onclick=()=>{$('mainChoices').style.display='none';$('restaurantChoices').style.display='block';$('dateChoiceMsg').textContent='Escolha o tipo de restaurante ❤️'};
+$('backChoices').onclick=()=>{$('restaurantChoices').style.display='none';$('mainChoices').style.display='grid';$('dateChoiceMsg').textContent='Escolha o nosso passeio ❤️'};
+
 document.querySelectorAll('.choice').forEach(b=>b.onclick=async()=>{let d=new Date($('dateInput').value+'T00:00:00');finalPayload={date:d.toLocaleDateString('pt-BR'),time:$('timeInput').value,choice:b.dataset.x};addBubble(b.dataset.x,'them');show('final');$('summary').innerHTML=`Nosso date ficou marcado para <strong>${finalPayload.date}</strong>, às <strong>${finalPayload.time}</strong>.<br><br>${finalPayload.choice}<br><br>Agora é só preparar o sorriso. ❤️`;
   const status=await notifyOwner(finalPayload); $('notifyStatus').textContent=status.ok?'Aviso enviado para você. 🔔':'Convite confirmado. ❤️'; browserNotify();
 });
-$('again').onclick=()=>{attempts=0;$('no').style.display='';$('no').style.transform='';$('msg').textContent='Escolha com carinho... 👀';$('chat').innerHTML='';show('landing')};
+$('again').onclick=()=>{attempts=0;$('no').style.display='';$('no').style.transform='';$('msg').textContent='Escolha com carinho... 👀';$('chat').innerHTML='';$('restaurantChoices').style.display='none';$('mainChoices').style.display='grid';$('dateChoiceMsg').textContent='Escolha o nosso passeio ❤️';show('landing')};
